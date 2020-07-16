@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<form action="/" method="post">
+    {% csrf_token %}
+    <label style="margin-right:30px;margin-bottom:30px">First Number:</label>
+    <input type="number" name="number_1" style="margin-bottom:30px"/><br/>
+    <label style="margin-right:16px">Second Number</label>
+    <input type="number" name="number_2"/><br/>
+    <p style="margin-left:119px">
+    <input type="radio" name="category" value="add"> Add<Br>
+    <input type="radio" name="category" value="subtract"> Subtract<Br>
+    <input type="radio" name="category" value="multiply"> Multiply<Br>
+    <input type="radio" name="category" value="divide"> Divide<Br>
+    </p>
+
+    <input type="submit" value="Calculate" style="margin-left:119px"/>
+    <h2>{{ result }} {{ num_1 }} {{ sign}} {{ num_2}} {{ equally}} {{ total}}  </h2>
+</form>
+</body>
+</html>
